@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="@dimen/main_size"
+    tools:menu="@menu/menu"
+    >
+
+
+
+        <EditText
+            android:autofillHints="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombrep"
+            android:hint="@string/main_activity_input_name"
+            android:inputType="textPersonName"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numerop"
+            android:hint="@string/main_activity_input_phone"
+            android:inputType="phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_label_degree"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font"
+            />
+        <Spinner
+            android:id="@+id/spin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/escolaridad">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_label_sex"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_activity_man"
+                android:layout_weight="1"
+                android:id="@+id/male"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_activity_fem"
+                android:id="@+id/female"
+                android:layout_weight="1"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_hint_book"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font"
+            />
+        <AutoCompleteTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_activity_AutocompleteTV"
+            android:hint="@string/main_activity_books"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_sport"
+            android:checked="false"
+            android:id="@+id/checkp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+    <Button
+        android:id="@+id/buttonsend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_activity_clean"
+        android:layout_alignParentBottom="true"
+        android:onClick="buttclick"
+        />
+    </RelativeLayout>
+</LinearLayout>
